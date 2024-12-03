@@ -28,7 +28,7 @@ const CommunicationMethodManagement = () => {
   const fetchMethods = async () => {
     try {
       const response = await axios.get(
-        "https://entnt-backend-i7my.onrender.com/api/communications"
+        "https://entnt-backend-d111.onrender.com/api/communications"
       );
       setMethods(response.data);
     } catch (error) {
@@ -52,13 +52,13 @@ const CommunicationMethodManagement = () => {
     try {
       if (editId) {
         await axios.put(
-          `https://entnt-backend-i7my.onrender.com/api/communications/${editId}`,
+          `https://entnt-backend-d111.onrender.com/api/communications/${editId}`,
           form
         );
         setEditId(null);
       } else {
         await axios.post(
-          `https://entnt-backend-i7my.onrender.com/api/communications`,
+          `https://entnt-backend-d111.onrender.com/api/communications`,
           form
         );
       }
@@ -77,7 +77,7 @@ const CommunicationMethodManagement = () => {
   const handleDelete = async (id) => {
     try {
       await axios.delete(
-        `https://entnt-backend-i7my.onrender.com/api/communications/${id}`
+        `https://entnt-backend-d111.onrender.com/api/communications/${id}`
       );
       fetchMethods();
     } catch (error) {

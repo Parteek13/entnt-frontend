@@ -21,7 +21,7 @@ const CompanyManagement = () => {
 
   const fetchCompanies = async () => {
     try {
-      const response = await axios.get("https://entnt-backend-i7my.onrender.com/api/companies");
+      const response = await axios.get("https://entnt-backend-d111.onrender.com/api/companies");
       setCompanies(response.data);
     } catch (error) {
       console.error("Error fetching companies:", error);
@@ -90,11 +90,11 @@ const CompanyManagement = () => {
       try {
         if (currentCompany) {
           await axios.put(
-            `https://entnt-backend-i7my.onrender.com/api/companies/edit/${currentCompany._id}`,
+            `https://entnt-backend-d111.onrender.com/api/companies/edit/${currentCompany._id}`,
             data
           );
         } else {
-          await axios.post(`https://entnt-backend-i7my.onrender.com/api/companies/add`, data);
+          await axios.post(`https://entnt-backend-d111.onrender.com/api/companies/add`, data);
         }
         fetchCompanies();
         handleCloseModal();
@@ -109,7 +109,7 @@ const CompanyManagement = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this company?")) {
       try {
-        await axios.delete(`https://entnt-backend-i7my.onrender.com/api/companies/delete/${id}`);
+        await axios.delete(`https://entnt-backend-d111.onrender.com/api/companies/delete/${id}`);
         fetchCompanies();
       } catch (error) {
         console.error("Error deleting company:", error);
