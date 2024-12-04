@@ -29,7 +29,7 @@ const AdminDashboard = () => {
         elevation={6}
         sx={{
           width: "100%",
-          maxWidth: 1200,
+          maxWidth: 1500,
           padding: 5,
           borderRadius: 4,
           backgroundColor: "#ffffff",

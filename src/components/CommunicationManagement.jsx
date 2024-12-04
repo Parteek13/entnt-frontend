@@ -86,7 +86,7 @@ const CommunicationMethodManagement = () => {
   };
 
   return (
-    <Box sx={{ padding: 4, backgroundColor: "#f0f4f8", borderRadius: "8px" }}>
+    <Box sx={{ padding: 4, backgroundColor: "#f0f4f8", borderRadius: "8px" , width:1400}}>
       <hr
         style={{
           border: "0.5px solid #ddd",
